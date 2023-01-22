@@ -652,6 +652,77 @@ img {
   align-items: baseline;
 }
 
+.subscribe-wrap {
+  margin-left: auto;
+}
+
+.subscribe-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.subscribe-email-input {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2;
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.subscribe-btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition), background-color var() ;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color:#404BBF;
+}
+
+
+.subscribe-email-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
 /* Modal */
 
 .backdrop {
@@ -669,7 +740,7 @@ img {
     transform var(--transition);
 }
 
-.backdrop .is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -763,16 +834,16 @@ img {
   box-sizing: border-box;
   padding-left: 42px;
   outline: transparent;
+  transition: var(--transition), fill var(--transition);
 }
 
 .modal-form-input:focus {
   border: 1px solid #4d5ae5;
-  transition: var(--transition);
+  
 }
 
 .modal-form-input:focus + .modal-icon {
   fill: #4d5ae5;
-  transition: var(--transition);
 }
 
 .modal-form-input-name {
@@ -786,7 +857,6 @@ img {
 }
 .modal-form-messege:focus {
   border: 1px solid #4d5ae5;
-  transition: var(--transition);
 }
 
 .modal-form-messege {
@@ -804,6 +874,7 @@ img {
   padding-top: 8px;
   padding-left: 16px;
   outline: none;
+  transition: var(--transition), border var(--transition);
 }
 
 .modal-form-messege::placeholder {
@@ -819,7 +890,7 @@ img {
   height: 24px;
   left: 0;
   top: 25%;
-  transform: translate(100%);
+  transform: translate(75%);
 }
 
 .input-wrap {
@@ -847,12 +918,13 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  transition: var(--transition), background-color var(--transition);
 }
 
 .modal-form-send:hover,
 .modal-form-send:focus {
   background-color: #404bbf;
-  transition: var(--transition), background-color var(--transition);
+  
 }
 
 .modal-user-policy {
@@ -872,15 +944,17 @@ img {
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
+  display: block;
   background-color: #404bbf;
   border: 1.25px solid #404bbf;
   border-radius: 2px;
-  background-image: url(../images/vector-black.svg);
-  color: #F4F4FD;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 32'%3E%3Ctitle%3EVector-3%3C/title%3E%3Cpath fill='%23f4f4fd' d='M33.782 1.020c0.691-0.662 1.611-1.027 2.565-1.020s1.869 0.387 2.55 1.059c0.681 0.672 1.076 1.584 1.101 2.543s-0.321 1.891-0.966 2.598l-19.578 24.617c-0.337 0.365-0.743 0.657-1.195 0.86s-0.939 0.312-1.434 0.322c-0.495 0.009-0.986-0.082-1.445-0.268s-0.876-0.463-1.226-0.815l-12.984-13.054c-0.362-0.339-0.652-0.747-0.853-1.201s-0.309-0.944-0.318-1.441 0.082-0.99 0.267-1.451c0.185-0.461 0.461-0.879 0.81-1.231s0.766-0.628 1.224-0.814 0.949-0.277 1.443-0.269c0.494 0.009 0.981 0.118 1.433 0.32s0.858 0.494 1.195 0.857l10.275 10.325 17.042-21.83c0.031-0.038 0.063-0.074 0.098-0.109h-0.005z'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  display: flex;
   background-position: center;
   align-items: center;
+  
 }
 
 .modal-form-check:focus + .modal-form-check-desc::before {
